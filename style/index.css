@@ -1,10 +1,561 @@
-*{
+/* FONT  */
+
+/* sora */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* ALEXENDIRA */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+
+
+.sora {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+.alexandria {
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* FONT CSS  END */
+
+
+
+
+
+
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* MAIN CONTAINER  */
+.main-container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.padding-container {
+    padding: 0px;
+}
+
+
+/* colour code */
+:root {
+    --vg-hero-color: #EACEFF;
+   
+    --vg-accent: #4D0361;
+    --vg-primary: #EEE3F6;
+}
+
+
+/* GLOBAL REUSABLE BUTTON */
+.vg-btn {
+    background: var(--vg-accent);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ROUND ICON BACKGROUND */
+.vg-btn-icon-parent {
+    list-style: none;
+    background-color: azure;
+    border-radius: 100%;
+    padding: 5px;
+    max-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ICON ROTATION */
+.vg-btn-icon {
+    color: black;
+    transform: rotate(220deg);
+}
+
+
+
+
+/* HERO-SECTION CSS DESIGNE */
+.hero-container {
+    background-color: var(--vg-hero-color);
+    /* max-height: ; */
+}
+
+.hero-container .hero-section {
+
+
+    display: flex;
+    position: relative;
+
 
 }
 
 
-/* EACEFF  hero-colour  */ 
-/* 4D0361  accent colour */
-/* EEE3F6 primary colour */
+
+
+
+
+/* HERO IMAGE CSS */
+.hero-container .hero-section .hero-image {
+    max-width: 50%;
+    display: flex;
+    justify-content: end;
+
+    position: relative;
+
+
+
+}
+
+
+
+.hero-container .hero-section .hero-image .women-image {
+    max-width: 300px;
+    margin: auto;
+
+
+}
+
+.hero-container .hero-image .hero-image-modal {
+
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    right: -140px;
+    z-index: 5;
+
+    top: 42%;
+    max-width: 300px;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+
+}
+
+.hero-container .hero-image .hero-image-modal .modal-heading {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+
+
+
+.hero-container .hero-image-modal .google img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.hero-container .hero-image-modal h1 {
+
+    font-size: small;
+}
+
+
+.hero-container .hero-image-modal hr {
+    margin: 5px 0;
+}
+
+
+.hero-container .stars-container {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 2px;
+    /* space between stars */
+}
+
+.hero-container .stars-container .star {
+    width: 20px;
+
+}
+
+.hero-container .stars-container .star.filled path {
+    fill: rgb(3, 3, 3);
+}
+
+.hero-container .stars-container .star.unfilled path {
+    fill: none;
+    stroke: rgb(2, 2, 2);
+    stroke-width: 20;
+}
+
+
+
+
+/* HERO TEXT CSS */
+.hero-container .hero-section .text-container {
+    display: flex;
+    align-items: center;
+}
+
+.hero-container .hero-section .hero-text-box {
+    max-width: 658px;
+    max-height: 441px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-container .Optimizing-text {
+    font-weight: 200;
+
+}
+
+.hero-container .Nervous-text {
+
+    font-weight: 600;
+    font-size: 62px;
+    line-height: 120%;
+
+}
+
+.hero-container .Only-text {
+    font-size: medium;
+    font-weight: 400;
+}
+
+.hero-container .Our-customers {
+
+    font-size: small;
+    font-weight: 600;
+}
+
+
+/* HERO BUTTON */
+.hero-container .btn-container {
+    max-width: 438px;
+}
+
+.hero-container .dot {
+    font-weight: 600;
+}
+
+
+
+/* HERO INFORMATION MODAL ..BOTTOM */
+
+
+
+.hero-container .hero-information-modal {
+    position: absolute;
+    bottom: -170px;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 700px;
+    padding: 20px 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+.hero-container .hero-information-modal .text-button-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.hero-container .hero-information-modal .info-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hero-container .hero-information-modal .info-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* .hero-container .hero-information-modal .info-btn {
+    display: flex;
+    flex-direction: row;
+    width: 215px;
+    justify-content: space-around;
+
+    align-items: center;
+    padding: 14px 16px;
+    font-size: 16px;
+    background: #FAFAFA;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+
+    cursor: pointer;
+    gap: 0;
+}
+
+.hero-container .hero-information-modal .info-btn:hover{
+
+    background-color: #D8AFF8;
+} */
+
+.hero-container .hero-information-modal .info-btn {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    width: 215px;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 14px 16px;
+    font-size: 16px;
+
+    background: #FAFAFA;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    
+    cursor: pointer;
+    gap: 0;
+
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* Background fill animation layer */
+.hero-container .hero-information-modal .info-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 0%;
+    height: 100%;
+
+    background-color: #D8AFF8; /* your hover color */
+    z-index: -1;
+
+    border-radius: inherit;
+    transition: width 0.4s ease;
+}
+
+/* On hover — background fills smoothly */
+.hero-container .hero-information-modal .info-btn:hover::before {
+    width: 100%;
+}
+
+
+
+
+.info-btn .vedio-icon svg {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    padding: 4px;
+    fill: white;
+    border-radius: 50%;
+}
+
+
+.info-btn .icon svg {
+    width: 18px;
+    height: 18px;
+    transform: rotate(210deg);
+}
+
+
+
+
+
+
+
+/* MEDIA QUERY  START */
+
+
+/* TABLET TO LARGE */
+@media screen and (max-width: 1250px) {}
+
+
+/* MOBILTE TO TABLET */
+@media screen and (max-width: 992px) {}
+
+
+
+
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+
+    /* main container */
+    .padding-container {
+        padding: 10px;
+    }
+
+
+    /* hero section media query */
+
+
+    /* buttton  start */
+    .hero-container .btn-container {
+        max-width: 200px;
+        margin: auto;
+    }
+
+    .vg-btn {
+        padding: 8px 8px;
+        gap: 4px;
+    }
+
+    /* buttun end */
+
+
+    /* modal start */
+    .hero-container .hero-image .hero-image-modal {
+        right: 0px;
+
+    }
+
+    /* modal end */
+
+
+    /* text box container  start*/
+    .hero-container .hero-section .hero-text-box {
+        gap: 10px;
+    }
+
+
+
+
+
+    .hero-container .Only-text {
+        max-width: 90%;
+        font-size: medium;
+        margin: auto;
+    }
+
+    .hero-container .Our-customers {
+        max-width: 80%;
+        margin: auto;
+        font-size: small;
+    }
+
+
+    .hero-container .Nervous-text {
+        font-size: 30px;
+
+
+    }
+
+    .hero-container .Optimizing-text {
+        font-size: medium;
+        font-weight: 300;
+        max-width: 90%;
+        margin: auto;
+    }
+
+
+    .hero-container .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-container .hero-section .hero-text-box {
+        text-align: center;
+    }
+
+
+
+
+
+    /* HERO IMAGE  */
+
+    .hero-container .hero-section .hero-image {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .hero-container .hero-section .hero-image .women-image {
+        width: 100%;
+        margin: auto;
+    }
+
+
+
+
+    /* HERO INFORMATION MODAL */
+
+    .hero-container .hero-information-modal .text-button-container {
+        width: 95%;
+    }
+
+
+
+    .hero-container .hero-information-modal .info-title {
+        font-size: 18px;
+
+    }
+
+    .hero-container .hero-information-modal {
+        left: 50%;
+        bottom: -110px;
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+
+    .hero-container .hero-information-modal .info-buttons {
+        gap: 10px;
+    }
+
+
+    .hero-container .hero-information-modal .info-btn {
+
+        padding: 8px 5px;
+        font-size: 12px;
+
+    }
+
+    .info-btn .vedio-icon svg {
+        width: 14px;
+        height: 14px;
+        background-color: black;
+        padding: 4px;
+        fill: white;
+        border-radius: 50%;
+    }
+
+
+
+
+    .info-btn .icon svg {
+        width: 10px;
+        height: 10px;
+        transform: rotate(210deg);
+    }
+
+    /* .hero-container .hero-information-modal .text-button-container {
+
+} */
+
+
+
+
+
+
+}
+
+/* MEDIA QUERY END */
