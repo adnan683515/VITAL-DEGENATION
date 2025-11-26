@@ -48,10 +48,13 @@
 /* colour code */
 :root {
     --vg-hero-color: #EACEFF;
-   
+    --vg-card-color: #def2f3;
     --vg-accent: #4D0361;
     --vg-primary: #EEE3F6;
+
 }
+
+/* 051418 */
 
 
 /* GLOBAL REUSABLE BUTTON */
@@ -94,6 +97,8 @@
 .hero-container {
     background-color: var(--vg-hero-color);
     /* max-height: ; */
+
+    max-height: 600px;
 }
 
 .hero-container .hero-section {
@@ -101,7 +106,6 @@
 
     display: flex;
     position: relative;
-
 
 }
 
@@ -115,19 +119,15 @@
     max-width: 50%;
     display: flex;
     justify-content: end;
-
     position: relative;
-
-
-
 }
 
 
 
 .hero-container .hero-section .hero-image .women-image {
-    max-width: 300px;
+    max-width: 100%;
     margin: auto;
-
+    height: 100%;
 
 }
 
@@ -137,16 +137,14 @@
     background-color: white;
     border-radius: 10px;
     padding: 10px 20px;
-    right: -140px;
+    left: 65%;
     z-index: 5;
-
-    top: 42%;
+    top: 55%;
     max-width: 300px;
     max-height: 150px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-
 
 }
 
@@ -167,7 +165,6 @@
 }
 
 .hero-container .hero-image-modal h1 {
-
     font-size: small;
 }
 
@@ -191,7 +188,7 @@
 }
 
 .hero-container .stars-container .star.filled path {
-    fill: rgb(3, 3, 3);
+    fill: rgb(240, 216, 4);
 }
 
 .hero-container .stars-container .star.unfilled path {
@@ -261,10 +258,12 @@
 .hero-container .hero-information-modal {
     position: absolute;
     bottom: -170px;
-    left: 42%;
+    left: 50%;
+
     transform: translate(-50%, -50%);
     background: white;
-    width: 700px;
+    width: 60%;
+
     padding: 20px 10px;
     border-radius: 15px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
@@ -291,27 +290,7 @@
     gap: 12px;
 }
 
-/* .hero-container .hero-information-modal .info-btn {
-    display: flex;
-    flex-direction: row;
-    width: 215px;
-    justify-content: space-around;
 
-    align-items: center;
-    padding: 14px 16px;
-    font-size: 16px;
-    background: #FAFAFA;
-    border: 1px solid gainsboro;
-    border-radius: 8px;
-
-    cursor: pointer;
-    gap: 0;
-}
-
-.hero-container .hero-information-modal .info-btn:hover{
-
-    background-color: #D8AFF8;
-} */
 
 .hero-container .hero-information-modal .info-btn {
     position: relative;
@@ -329,7 +308,7 @@
     background: #FAFAFA;
     border: 1px solid gainsboro;
     border-radius: 8px;
-    
+
     cursor: pointer;
     gap: 0;
 
@@ -347,7 +326,8 @@
     width: 0%;
     height: 100%;
 
-    background-color: #D8AFF8; /* your hover color */
+    background-color: #D8AFF8;
+    /* your hover color */
     z-index: -1;
 
     border-radius: inherit;
@@ -362,7 +342,7 @@
 
 
 
-.info-btn .vedio-icon svg {
+.hero-container .hero-information-modal .info-btn .vedio-icon svg {
     width: 18px;
     height: 18px;
     background-color: black;
@@ -372,7 +352,7 @@
 }
 
 
-.info-btn .icon svg {
+.hero-container .hero-information-modal .info-btn .icon svg {
     width: 18px;
     height: 18px;
     transform: rotate(210deg);
@@ -381,6 +361,398 @@
 
 
 
+
+/* 2nd section pilars start */
+
+.pilars-container .pilars-wrapper .pilars-card-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 20px;
+    margin: auto;
+}
+
+.pilars-container .pilars-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.pilars-container .pilars-title {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.pilars-container .pilars-title .pilars {
+
+    color: var(--vg-accent);
+}
+
+
+.pilars-container .nutrition-card {
+    background: #f4f7f7;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 8px rgb(233, 231, 231);
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: hidden;
+    color: black;
+}
+
+/* Create the overlay using a pseudo-element */
+.pilars-container .nutrition-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--vg-accent);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+/* On hover, scale the pseudo-element from bottom to top */
+.pilars-container .nutrition-card:hover::before {
+    transform: scaleY(1);
+}
+
+/* Ensure text and icon stay above overlay */
+.pilars-container .nutrition-card * {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+/* Optional: change text color on hover */
+.pilars-container .nutrition-card:hover h3,
+.pilars-container .nutrition-card:hover p,
+.pilars-container .nutrition-card:hover .bottom-wrapper h1 {
+    color: white;
+}
+
+.pilars-container .nutrition-card:hover .icon-box .arrow-icon {
+    fill: white;
+}
+
+.pilars-container .nutrition-card:hover .nutrition-img {
+    filter: brightness(0) invert(1);
+    /* makes it white */
+}
+
+/* Vector image top-right */
+.pilars-container .nutrition-card .nutrition-img {
+    position: absolute;
+    padding-top: 10px;
+    margin-bottom: 50px;
+    top: 0px;
+    right: 10px;
+    width: 50px;
+    height: auto;
+    pointer-events: none;
+}
+
+.pilars-container .nutrition-card h3 {
+    margin-top: 40px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pilars-container .nutrition-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Bottom wrapper with flex */
+.pilars-container .bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.pilars-container .bottom-wrapper h1 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.pilars-container .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    /* remove spacing from i tag if any */
+}
+
+/* Arrow icon styling */
+.pilars-container .icon-box .arrow-icon {
+    width: 30px;
+    height: 20px;
+    fill: #000;
+    /* arrow color */
+    transform: rotate(270deg);
+    /* rotate to point right */
+    transition: transform 0.3s ease;
+    /* optional smooth hover effect */
+}
+
+
+
+/* Optional: rotate slightly on hover */
+.pilars-container .icon-box:hover .arrow-icon {
+    transform: rotate(100deg);
+}
+
+
+.pilars-container .pilars-card-container .bottom-wrapper h1 {
+
+    color: var(--vg-accent);
+}
+
+
+
+
+
+
+
+
+
+/* MAIN SECTION */
+.but-why-container {
+    background-color: #051418;
+    min-height: 1041px;
+    position: relative;
+    overflow: hidden;
+    margin: 5% 0;
+}
+
+/* Background effect inside parent - right aligned */
+.but-why-container .why-effect-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 78%;
+    height: 100%;
+    z-index: 0;
+
+}
+
+/* INNER CONTAINER */
+.but-why-container .but-why-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    position: relative;
+    z-index: 2;
+    gap: 40px;
+}
+
+.but-why-container .but-why-title {
+    color: whitesmoke;
+    padding: 30px 0;
+}
+
+/* LEFT SIDE TEXT BOX */
+.but-why-container .why-text-box {
+    max-width: 486px;
+    height: 788px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* CARD - NO BACKGROUND */
+.but-why-container .why-card {
+    max-height: 316px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* ICON */
+.but-why-container .why-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* TITLES & TEXT WHITE */
+.but-why-container .why-card h3 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.but-why-container .why-card p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+}
+
+/* RIGHT SIDE MAIN IMAGE BOX */
+.but-why-container .why-image-box {
+
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.but-why-container .why-image-box .main-img {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.but-why-container .why-btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.but-why-container .why-btn .btn-container .vg-btn {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.25);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+
+
+
+
+
+
+
+
+/* knowledge  based section */
+/* Outer layout */
+.knowledge-container {
+    padding: 70px 0;
+}
+
+/* GRID */
+.knowledge-container .knowledge-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.knowledge-container .kb-card {
+    position: relative;
+    height: 320px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* TOP BADGE – SMALLER & CLEANER */
+.knowledge-container .kb-card .kb-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: rgba(255, 255, 255, 0.85);
+    padding: 5px 12px;
+    border-radius: 40px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+    /* Smaller badge */
+    transform: scale(0.9);
+    transform-origin: left top;
+}
+
+/* ICON FIX */
+.knowledge-container .kb-card .kb-badge .badge-icon img {
+    width: 22px;
+    /* PERFECT SIZE */
+    height: 22px;
+    object-fit: contain;
+}
+
+/* TEXT FIX */
+.badge-text {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* BOTTOM MODAL */
+.kb-modal {
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+    height: 30%;
+    padding: 10px 16px;
+
+    border-radius: 19px;
+    
+    font-weight: 600;
+
+
+    /* Use gradient background for border effect */
+    background: linear-gradient(to bottom, #4D0361, #D8AFF8);
+    padding: 2px; /* border thickness */
+    box-sizing: border-box;
+
+    /* Inner white content */
+    display: flex;
+    
+}
+
+.kb-modal .kd-modal-bottom-text {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px; 
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20%;
+
+}
+.knowledge-container .knowledge-wrapper .kb-modal .kd-modal-bottom-text .bottom-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.knowledge-container .kb-modal .kd-modal-bottom-text .title{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+
+.knowledge-container .kb-modal .kd-modal-bottom-text .des{
+    font-size: 13px;
+    color: #111111;
+    font-weight: 400;
+}
+.knowledge-container .kb-modal .kd-modal-bottom-text .arrow-right{
+width: 8%;
+}
 
 
 
@@ -392,7 +764,123 @@
 
 
 /* MOBILTE TO TABLET */
-@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 992px) {
+    .padding-container {
+        padding: 10px;
+        /* reduce padding for smaller screens */
+    }
+
+    /* btn */
+    .vg-btn {
+        padding: 5px 10px;
+    }
+
+
+    /* HERO TEXT BOX */
+    .hero-container .hero-section .hero-text-box {
+        gap: 5px;
+
+    }
+
+    .hero-container .btn-container {
+        max-width: 150px;
+    }
+
+
+
+    .hero-container .Nervous-text {
+
+        font-weight: 600;
+        font-size: 38px;
+
+    }
+
+    .hero-container .Optimizing-text {
+        font-size: 20px;
+
+    }
+
+
+    .hero-container .Only-text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+
+    .hero-container .Our-customers {
+
+        font-weight: 500;
+    }
+
+
+    /* hero image modal */
+    .hero-container .hero-image .hero-image-modal {
+
+
+        border-radius: 10px;
+        padding: 10px 10px;
+        left: 59%;
+        z-index: 5;
+        top: 50%;
+        max-width: 300px;
+        max-height: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+    }
+
+    /* hero information modal */
+    .hero-container .hero-information-modal {
+
+        width: 70%;
+
+        padding: 15px 15px;
+
+    }
+
+    .hero-container .hero-information-modal .text-button-container {
+        width: 100%;
+
+    }
+
+
+
+
+    .hero-container .hero-information-modal .info-btn {
+
+        width: 200px;
+        padding: 10px 10px;
+        font-size: 15px;
+        ;
+    }
+
+    /* Example: adjust card grid for tablet/mobile */
+    .pilars-container .pilars-wrapper .pilars-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row */
+        gap: 15px;
+    }
+
+    /* Optional: resize text/icons */
+    .nutrition-card h3 {
+        font-size: 18px;
+    }
+
+    .nutrition-card p {
+        font-size: 13px;
+    }
+
+    .bottom-wrapper h1 {
+        font-size: 14px;
+    }
+
+    .arrow-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
 
 
 
@@ -426,8 +914,36 @@
 
     /* modal start */
     .hero-container .hero-image .hero-image-modal {
-        right: 0px;
+        padding: 5px 5px;
+        top: 36%;
 
+    }
+
+    .hero-container .hero-image .hero-image-modal .modal-heading {
+        gap: 2px;
+    }
+
+    .hero-container .hero-image-modal .google img {
+        width: 60%;
+    }
+
+    .hero-container .hero-image-modal h1 {
+        font-size: x-small;
+    }
+
+    .hero-container .stars-container {
+        max-width: 100%;
+        gap: 1px;
+    }
+
+
+    .hero-container .stars-container .star {
+        width: 15px;
+    }
+
+    .hero-container .hero-image-modal .reviews-text {
+        font-size: small;
+        text-align: center;
     }
 
     /* modal end */
@@ -491,6 +1007,7 @@
     .hero-container .hero-section .hero-image .women-image {
         width: 100%;
         margin: auto;
+
     }
 
 
@@ -547,11 +1064,69 @@
         transform: rotate(210deg);
     }
 
-    /* .hero-container .hero-information-modal .text-button-container {
-
-} */
 
 
+
+
+
+    /* pilars section  */
+
+
+
+    .pilars-container .pilars-title {
+        margin-top: 80px;
+        font-size: 22px;
+    }
+
+
+    .pilars-container .pilars-wrapper .pilars-card-container {
+        max-width: 85%;
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+
+
+
+
+    /* but why section  */
+    .but-why-container .but-why-section {
+        flex-direction: column;
+    }
+
+    .but-why-container .why-effect-bg {
+        top: 60%;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+
+    }
+
+    .but-why-container .why-image-box {
+
+        margin-top: 100px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .but-why-container .why-text-box {
+
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .but-why-container .why-card {
+
+        text-align: center;
+    }
+
+    .but-why-container .but-why-title {
+        font-size: 20px;
+        text-align: center;
+    }
 
 
 
