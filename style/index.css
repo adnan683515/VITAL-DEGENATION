@@ -382,9 +382,17 @@
     align-items: center;
 }
 
+.pilars-container .pilars-section-title {
+    display: flex;
+    justify-content: center;
+}
+
 .pilars-container .pilars-title {
     text-align: center;
     margin-top: 150px;
+
+    font-size: 40px;
+    width: 40%;
 }
 
 .pilars-container .pilars-title .pilars {
@@ -669,7 +677,7 @@
     align-items: center;
     gap: 8px;
 
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--vg-primary);
     padding: 5px 12px;
     border-radius: 40px;
 
@@ -689,14 +697,14 @@
 }
 
 /* TEXT FIX */
-.badge-text {
+.knowledge-container .kb-card .badge-text {
     font-size: 13px;
     font-weight: 600;
     margin: 0;
 }
 
 /* BOTTOM MODAL */
-.kb-modal {
+.knowledge-container .kb-card .kb-modal {
     position: absolute;
     bottom: -15%;
     left: 50%;
@@ -704,28 +712,43 @@
 
     width: 80%;
     height: 30%;
-    padding: 10px 16px;
-
+    padding: 2px;
     border-radius: 19px;
-    
-    font-weight: 600;
 
-
-    /* Use gradient background for border effect */
+    /* Default border gradient */
     background: linear-gradient(to bottom, #4D0361, #D8AFF8);
-    padding: 2px; /* border thickness */
-    box-sizing: border-box;
 
-    /* Inner white content */
-    display: flex;
-    
+    transition: background 7s ease-in-out;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
+
+
+.knowledge-container .kb-card .kb-modal-inner {
+    background: #fff;
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+/* Hover — only border gradient changes */
+.knowledge-container .kb-card .kb-modal:hover {
+    background: linear-gradient(to bottom, #D8AFF8, #4D0361);
+}
+
+
+
+
 
 .kb-modal .kd-modal-bottom-text {
     background: #fff;
     width: 100%;
     height: 100%;
-    border-radius: 16px; 
+    border-radius: 16px;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -733,26 +756,435 @@
     row-gap: 20%;
 
 }
-.knowledge-container .knowledge-wrapper .kb-modal .kd-modal-bottom-text .bottom-text{
+
+.knowledge-container .knowledge-wrapper .kb-modal .kd-modal-bottom-text .bottom-text {
     display: flex;
     justify-content: space-between;
 }
 
-.knowledge-container .kb-modal .kd-modal-bottom-text .title{
+.knowledge-container .kb-modal .kd-modal-bottom-text .title {
     font-size: 20px;
     font-weight: 500;
-    
+
 }
 
 
-.knowledge-container .kb-modal .kd-modal-bottom-text .des{
+.knowledge-container .kb-modal .kd-modal-bottom-text .des {
     font-size: 13px;
     color: #111111;
     font-weight: 400;
 }
-.knowledge-container .kb-modal .kd-modal-bottom-text .arrow-right{
-width: 8%;
+
+.knowledge-container .kb-modal .kd-modal-bottom-text .arrow-right {
+    width: 6%;
+
 }
+
+.knowledge-container .kb-modal .kd-modal-bottom-text .arrow-right path {
+    fill: var(--vg-accent);
+}
+
+.knowledge-container .knowladge-section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.knowledge-container .knowladge-section-title div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+    text-align: center;
+
+}
+
+.knowledge-container .knowladge-section-title div h1 {
+    font-weight: 600;
+}
+
+.knowledge-container .knowladge-section-title .get-started {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.knowledge-container .knowladge-section-title {
+    margin-bottom: 2%;
+}
+
+
+
+/* nerven system section started */
+/* Main Section */
+.nervensystem-section {
+
+    margin: 6% 0;
+    background-color: #f5f8fa;
+    min-height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nervensystem-section .nervensystem-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+
+
+}
+
+/* Container for left + right boxes */
+.nervensystem-section .nervensystem-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+/* LEFT: Text box */
+.nervensystem-section .nervensystem-text-box {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+.nervensystem-section .nervensystem-text-box .title {
+
+    width: 68%;
+}
+
+.nervensystem-section .nervensystem-container .nervensystem-text-box .des {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 70%;
+}
+
+/* Button centered under text */
+.nervensystem-section .nervensystem-btn {
+    align-self: center;
+    /* center horizontally */
+    padding: 12px 28px;
+    background-color: #4D0361;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.nervensystem-section .nervensystem-btn:hover {
+    background-color: #D8AFF8;
+}
+
+/* RIGHT: Title + Image */
+.nervensystem-section .nervensystem-right-box {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    text-align: center;
+
+
+}
+
+.nervensystem-section .nervensystem-right-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.nervensystem-section .nervensystem-image-box img {
+
+
+    width: 70%;
+    border-radius: 12px;
+}
+
+
+
+
+/* Container: flex layout */
+.nervensystem-section .nervensystem-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    flex-wrap: wrap;
+    /* responsive */
+}
+
+/* LEFT: Image box */
+.nervensystem-section .nervensystem-left-image {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: start;
+    max-width: 60%;
+}
+
+.nervensystem-section .nervensystem-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+.nervensystem-section .nervensystem-left-image img {
+    width: 70%;
+
+    border-radius: 12px;
+}
+
+/* RIGHT: Text box */
+.nervensystem-section .nervensystem-right-text {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+
+.nervensystem-section .nervensystem-right-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    width: 60%;
+    margin: 0;
+    line-height: 150%;
+    font-size: xx-large;
+}
+
+.nervensystem-section .nervensystem-container-2 .nervensystem-right-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 90%;
+    line-height: 190%;
+}
+
+
+.nervensystem-section .nervensystem-right-box .right-box-title {
+    font-size: medium;
+}
+
+
+.nervensystem-section .nervensystem-text-box .vorAnwending,
+.nervensystem-section .nervensystem-text-box .nach-dem-start {
+    font-weight: 700;
+
+}
+
+.nervensystem-section .nervensystem-container-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nervensystem-section .nervensystem-container-2 .nervensystem-left-image {
+    max-width: 35%;
+}
+
+.nervensystem-section .nervensystem-container-2 .nervensystem-left-image img {
+    width: 100%;
+}
+
+.nervensystem-section .nervensystem-container-2 .nervensystem-right-text {
+    max-width: 50%;
+}
+
+
+/* pricing section */
+.pricing-section {
+
+    padding-top: 140px;
+    background-color: var(--vg-primary);
+    text-align: center;
+    min-height: 800px;
+}
+
+.pricing-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+.pricing-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 15px;
+    color: #444;
+}
+
+/* Grid */
+.pricing-wrapper {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+
+
+/* CARD */
+.pricing-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 380px;
+    margin: auto;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pricing-section .pricing-card-2 .pricing-card-heading {
+    color: white;
+}
+
+.pricing-card-2 {
+    background: var(--vg-accent);
+    padding: 25px;
+    color: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 380px;
+    margin: auto;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pricing-card-heading {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.pricing-card-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pricing-card .pricing-card-sub {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    margin-bottom: -10px;
+}
+
+.pricing-card-2 .pricing-card-sub {
+    font-size: 14px;
+    color: white;
+    margin-bottom: -10px;
+}
+
+.pricing-card hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Price */
+
+.pricing-price {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--vg-accent);
+}
+
+.pricing-card-2 .pricing-price {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Features */
+.pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.feature-icon {
+    color: var(--vg-accent);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Button */
+.pricing-btn {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: var(--vg-accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+
+
+.pricing-btn:hover {
+    background: var(--vg-accent);
+    color: white;
+}
+
+.pricing-btn-2 {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: white;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+
+
+.pricing-btn-2:hover {
+    background: #6a0f85;
+    color: white;
+}
+
+
 
 
 
@@ -880,6 +1312,89 @@ width: 8%;
         width: 30px;
         height: 30px;
     }
+
+
+
+
+    /* knowledge based section */
+    .knowledge-container .knowledge-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        row-gap: 70px;
+    }
+
+    .knowledge-container .knowladge-section-title div h1 {
+        font-weight: 500;
+        font-size: 30px;
+    }
+
+
+
+    /* nervensystem section */
+    /* LEFT: Text box */
+    .nervensystem-section .nervensystem-text-box {
+        flex: 1 1 45%;
+        gap: 10px;
+        font-size: 14px;
+
+        line-height: 1.4;
+    }
+
+    .nervensystem-section .nervensystem-container .nervensystem-text-box .des {
+        width: 98%;
+    }
+
+    .nervensystem-section .nervensystem-right-box {
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        gap: 20px;
+        text-align: center;
+    }
+
+    .nervensystem-section .nervensystem-image-box img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .nervensystem-section .nervensystem-container-2 .nervensystem-left-image {
+        max-width: 90%;
+
+
+    }
+
+    .nervensystem-section .nervensystem-container-2 .nervensystem-left-image img {
+        width: 90%;
+    }
+
+    .nervensystem-section .nervensystem-right-text h2 {
+
+
+        width: 100%;
+
+        line-height: 140%;
+        font-size: 23px;
+
+    }
+
+    .nervensystem-section .nervensystem-container-2 .nervensystem-right-text p {
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 90%;
+        line-height: 170%;
+    }
+
+    .nervensystem-section {
+        margin: 10% 0;
+
+        min-height: auto;
+
+        padding: 50px 10px;
+
+    }
+
 }
 
 
@@ -1071,6 +1586,10 @@ width: 8%;
 
     /* pilars section  */
 
+    .pilars-container .pilars-title {
+
+        width: 90%;
+    }
 
 
     .pilars-container .pilars-title {
@@ -1127,6 +1646,120 @@ width: 8%;
         font-size: 20px;
         text-align: center;
     }
+
+
+    /* knowledge based container */
+    .knowledge-container .knowledge-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 80px;
+    }
+
+    .knowledge-container .kb-modal .kd-modal-bottom-text .title {
+        font-size: 15px;
+        font-weight: 500;
+
+    }
+
+
+
+    /* nervensystem section start */
+
+    .nervensystem-section {
+
+        margin-top: 20%;
+    }
+
+    .nervensystem-section .nervensystem-container {
+
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .nervensystem-section .nervensystem-container-2 {
+
+
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .nervensystem-section .nervensystem-text-box {
+        flex: 1 1 100%;
+
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 15px;
+
+    }
+
+    .nervensystem-section .nervensystem-text-box .title {
+
+        width: 90%;
+        margin: auto;
+        font-size: 23px;
+    }
+
+    .nervensystem-section .nervensystem-container .nervensystem-text-box .des {
+
+
+        width: 98%;
+        margin: auto;
+    }
+
+    .nervensystem-section .nervensystem-container .btn-container {
+
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .nervensystem-section .nervensystem-container-2 .nervensystem-left-image {
+        max-width: 90%;
+        margin: auto;
+
+    }
+
+    .nervensystem-section .nervensystem-container-2 .nervensystem-right-text {
+        max-width: 90%;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .nervensystem-section .nervensystem-container-2 {
+        margin-top: 5%;
+    }
+
+    .nervensystem-section .nervensystem-right-text h2 {
+
+        font-weight: bold;
+        width: 98%;
+        line-height: 130%;
+        font-size: 25px;
+        text-align: center;
+
+        margin-bottom: 5%;
+    }
+
+    .nervensystem-section .nervensystem-right-text p {
+        font-size: 12px;
+        line-height: 1.1;
+        max-width: 98%;
+        line-height: 120%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 5%;
+
+    }
+
+
+    .nervensystem-section .nervensystem-image-box img {
+
+
+        width: 90%;
+        border-radius: 12px;
+    }
+
 
 
 
