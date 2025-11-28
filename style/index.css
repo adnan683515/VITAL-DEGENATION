@@ -841,7 +841,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
     gap: 40px;
     flex-wrap: wrap;
 
@@ -1018,20 +1017,27 @@
     min-height: 800px;
 }
 
-.pricing-card-container {
+.pricing-section .pricing-card-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* Header */
-.pricing-header h2 {
-    font-size: 28px;
+
+.pricing-section .pricing-header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.pricing-section .pricing-header h2 {
+    font-size: xx-large;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.pricing-header p {
+.pricing-section .pricing-header p {
     max-width: 600px;
     margin: auto;
     font-size: 15px;
@@ -1039,7 +1045,7 @@
 }
 
 /* Grid */
-.pricing-wrapper {
+.pricing-section .pricing-wrapper {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1050,7 +1056,7 @@
 
 
 /* CARD */
-.pricing-card {
+.pricing-section .pricing-card {
     background: #fff;
     padding: 25px;
     border-radius: 16px;
@@ -1068,7 +1074,7 @@
     color: white;
 }
 
-.pricing-card-2 {
+.pricing-section .pricing-card-2 {
     background: var(--vg-accent);
     padding: 25px;
     color: white;
@@ -1083,89 +1089,143 @@
     gap: 18px;
 }
 
-.pricing-card-heading {
+.pricing-section .pricing-card-heading {
     text-align: start;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 13px;
 }
 
-.pricing-card-title {
+.pricing-section .pricing-card-title {
     font-size: 20px;
     font-weight: 700;
 }
 
-.pricing-card .pricing-card-sub {
+.pricing-section .pricing-card .pricing-card-sub {
     font-size: 14px;
     color: rgb(0, 0, 0);
     margin-bottom: -10px;
 }
 
-.pricing-card-2 .pricing-card-sub {
+.pricing-section .pricing-card-2 .pricing-card-sub {
     font-size: 14px;
     color: white;
     margin-bottom: -10px;
 }
 
-.pricing-card hr {
+.pricing-section .pricing-card hr {
     border: 0;
     border-top: 1px solid #ddd;
 }
 
 /* Price */
 
-.pricing-price {
+.pricing-section .pricing-price {
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--vg-accent);
+    text-align: center;
 }
 
-.pricing-card-2 .pricing-price {
+.pricing-section .pricing-card-2 .pricing-price {
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 500;
     color: white;
+    text-align: center;
 }
 
 /* Features */
-.pricing-features {
+.pricing-section .pricing-features {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    row-gap: 25px;
 }
 
-.feature-item {
+.pricing-section .feature-item {
     display: flex;
     align-items: flex-start;
     gap: 10px;
 }
 
-.feature-icon {
+.pricing-section .feature-icon {
     color: var(--vg-accent);
     font-size: 18px;
     font-weight: bold;
 }
 
 /* Button */
-.pricing-btn {
+.pricing-section .pricing-btn {
     margin-top: 10px;
     padding: 12px 20px;
     background: var(--vg-accent);
     color: #fff;
+
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
+    width: 90%;
+    margin: auto;
     transition: 0.3s ease;
 }
 
+.pricing-section .pricing-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--vg-accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+}
+
+.pricing-section .pricing-btn-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--vg-accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+}
+
+.pricing-section .pricing-btn .btn-svg-check {
+    width: 25px;
+    height: 25px;
+    fill: white;
+    stroke: var(--vg-accent);
+    transform: rotate(270deg);
+}
+
+.pricing-section .pricing-btn-2 .btn-svg-check {
+    width: 25px;
+    /* fixed width */
+    height: 25px;
+    /* fixed height */
+    fill: var(--vg-card-color);
+    /* inside color */
+    stroke: var(--vg-accent);
+    /* outline color */
+    transform: rotate(270deg);
+}
 
 
-.pricing-btn:hover {
+.pricing-section .pricing-btn:hover {
     background: var(--vg-accent);
     color: white;
 }
 
-.pricing-btn-2 {
+.pricing-section .pricing-card-2 .pricing-btn-2 {
     margin-top: 10px;
     padding: 12px 20px;
     background: white;
@@ -1174,14 +1234,374 @@
     border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
+    width: 90%;
+    margin: auto;
     transition: 0.3s ease;
 }
 
 
 
-.pricing-btn-2:hover {
+.pricing-section .pricing-card-2 .pricing-btn-2:hover {
     background: #6a0f85;
     color: white;
+}
+
+.pricing-section .icon-wrapper {
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-section .check-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--vg-accent);
+    stroke: white;
+    stroke-width: 1.5;
+}
+
+.pricing-section .pricing-card-2 .check-icon {
+    fill: white;
+    stroke: var(--vg-accent);
+}
+
+
+/* testimonial section start */
+.testimonial-section {
+    margin: 5% 0;
+    min-height: 551px;
+    position: relative;
+    background-color: #272727;
+    color: white;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+.testimonial-section .effect-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+.testimonial-section .effect-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Wrapper to place content above effects */
+.testimonial-wrapper {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Heading */
+.testimonial-section .testimonial-heading {
+    /* border: 1px solid white; */
+}
+
+.testimonial-heading .title {
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 8px;
+    width: 40%;
+
+}
+
+.testimonial-heading h2 {
+    font-size: 28px;
+    width: 73%;
+    font-weight: 700;
+}
+
+.testimonial-heading h2 span {
+    color: #D8AFF8;
+}
+
+/* Testimonial Card */
+.testimonial-section .testimonial-card {
+
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.testimonial-rating {
+    font-size: 20px;
+    color: #D8AFF8;
+}
+
+.testimonial-section .testimonial-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.testimonial-author {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.testimonial-author h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.testimonial-author span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+.testimonial-section .testimonial-card .testimonial-rating {
+    margin-top: 4px;
+    display: flex;
+    gap: 1%;
+}
+
+.testimonial-section .testimonial-card .testimonial-rating .star-testi {
+    width: 5%;
+    fill: var(--vg-hero-color);
+}
+
+
+
+
+
+.testimonial-heading-container {
+    display: flex;
+    row-gap: 10px;
+    line-height: 1.6;
+    justify-content: space-between;
+}
+
+/* Stats Grid */
+.testimonial-stats {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Stat item styling */
+.testimonial-section .testimonial-stats .stat-item {
+    display: flex;
+    align-items: center;
+
+    padding: 10px 15px;
+    gap: 15px;
+
+}
+
+.testimonial-stats .stat-item h3 {
+
+    font-size: 30px;
+}
+
+.testimonial-stats .stat-item p {
+    width: 70%;
+    font-size: 24px;
+}
+
+.testimonial-section .stat-item .last-border {
+    display: block;
+}
+
+
+/* Divider line empty divs */
+.testimonial-section .testimonial-stats>div:empty {
+    width: 2px;
+    height: 70%;
+    background: #ffffff60;
+    margin: auto;
+}
+
+
+
+
+/* silder */
+/* Container */
+.testimonial-slider-container {
+    width: 60%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+/* Track */
+.testimonial-section .testimonial-slider {
+    display: flex;
+    transition: transform .5s ease;
+}
+
+/* Show 1 card per slide */
+.testimonial-section .testimonial-card {
+    min-width: 100%;
+}
+
+/* Buttons Dots */
+.testimonial-section .slider-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.testimonial-section .slider-btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff40;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.testimonial-section .slider-btn.active {
+    background: var(--vg-primary);
+    /* Active button color */
+}
+
+.testimonial-section .button-groups-slide {
+
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+.faq-section {
+    padding: 50px;
+
+}
+
+.faq-section .faq-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.faq-section .faq-textbox {
+
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+}
+
+.faq-section .faq-section-name {
+    font-size: 12px;
+}
+
+
+.faq-section .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.faq-section .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-section .faq-question span {
+    font-weight: bold;
+}
+
+.faq-section .faq-toggle {
+    background: none;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    width: 3%;
+    transform: rotate(0deg);
+    transition: transform 0.6s;
+}
+
+.faq-section .faq-answer {
+    display: none;
+    padding-top: 10px;
+    color: #555;
+    transition: transform 0.9s;
+}
+
+.faq-section .faq-answer p {
+    margin: 0;
+}
+
+.faq-section .faq-imagebox {
+    width: 30%;
+
+
+    position: relative;
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+}
+
+.faq-section .faq-imagebox img {
+    width: 100%;
+
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.faq-section .faq-modal {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    background-color: var(--vg-hero-color);
+    color: #000000;
+    width: 50%;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.faq-section .faq-container .faq-textbox .title {
+    width: 50%;
+    line-height: 1.5;
+    font-size: 30px;
+
+}
+
+.faq-section .faq-container .faq-textbox .sub {
+    color: var(--vg-accent);
+}
+
+
+.faq-section .faq-container .faq-imagebox .faq-modal-icon {
+    width: 16%;
+    padding: 1px;
+
 }
 
 
@@ -1395,6 +1815,57 @@
 
     }
 
+
+
+    .pricing-section .pricing-wrapper {
+        margin: 0 20px;
+    }
+
+    .faq-section .faq-textbox {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .faq-section .faq-container .faq-textbox .title {
+        width: 80%;
+        line-height: 1.5;
+        font-size: 25px;
+    }
+
+    .faq-section .faq-imagebox {
+        width: 40%;
+
+    }
+
+    .faq-section .faq-modal {
+
+        width: 60%;
+
+    }
+
+    .testimonial-slider-container {
+        width: 100%;
+
+    }
+
+    .testimonial-section .testimonial-heading {
+
+        width: 80%;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 22px;
+        width: 90%;
+        font-weight: 600;
+    }
+
+    .testimonial-stats .stat-item p {
+    width: 60%;
+    font-size: 15px;
+}
+   
 }
 
 
@@ -1761,6 +2232,154 @@
     }
 
 
+    /* pricing */
+
+
+    .pricing-section .pricing-wrapper {
+
+
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px 30px;
+    }
+
+    .pricing-section {
+        padding-top: 50px;
+    }
+
+    .testimonial-section .testimonial-heading-container {
+        flex-direction: column;
+        line-height: 1.4;
+    }
+
+    .testimonial-section .testimonial-heading h2 {
+        font-size: 20px;
+        width: 90%;
+        margin: auto;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .testimonial-section .testimonial-heading .title {
+
+        width: 40%;
+        margin: auto;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .testimonial-section .testimonial-card {
+
+        max-width: 99%;
+        margin: auto;
+        margin: 20px 0;
+        padding: 1px;
+    }
+
+    .testimonial-section .testimonial-text {
+        font-size: 14px;
+
+    }
+
+    .testimonial-section {
+        margin: 10% 0;
+        min-height: auto;
+
+
+    }
+
+    .testimonial-section .testimonial-stats {
+        grid-template-columns: repeat(3, 1fr);
+        /* 2 columns only */
+    }
+
+
+
+    .testimonial-section .effect-1 {
+
+
+        display: none;
+
+    }
+
+    .testimonial-section .effect-2 {
+
+        display: none;
+
+
+    }
+
+    .testimonial-section .last-border {
+        display: none;
+    }
+
+    .testimonial-section .testimonial-stats .stat-item h3 {
+        font-size: 20px;
+    }
+
+    .testimonial-section .testimonial-stats .stat-item p {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .testimonial-section .testimonial-stats .stat-item {
+        align-items: center;
+        padding: 5px 5px;
+
+
+    }
+
+    .testimonial-slider-container {
+        width: 100%;
+
+    }
+
+    /* faq section */
+
+    .faq-section .faq-container {
+
+        flex-direction: column;
+
+    }
+
+    .faq-section .faq-textbox {
+        width: 90%;
+
+
+        row-gap: 10px;
+        margin: auto;
+    }
+
+    .faq-section .faq-container .faq-textbox .title {
+        width: 95%;
+        line-height: 1.2;
+        font-size: 20px;
+    }
+
+    .faq-section .faq-imagebox {
+        width: 90%;
+        margin: auto;
+    }
+
+    .faq-section .faq-modal {
+
+        width: 60%;
+
+    }
+
+    .faq-section .faq-modal p {
+        font-size: 12px;
+    }
+
+    .faq-section .faq-question span {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .faq-section .faq-answer {
+
+        font-size: 12px;
+
+    }
 
 
 
