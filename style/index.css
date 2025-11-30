@@ -1029,19 +1029,27 @@
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+
+    max-width: 789px;
+    margin: auto;
+}
+
+.pricing-section .pricing-header .pricing-plan {
+    font-size: 16px;
 }
 
 .pricing-section .pricing-header h2 {
-    font-size: xx-large;
+
     font-weight: 700;
     margin-bottom: 10px;
+    font-size: 40px;
 }
 
 .pricing-section .pricing-header p {
-    max-width: 600px;
-    margin: auto;
-    font-size: 15px;
-    color: #444;
+
+
+    color: #000000;
+    font-size: 20px;
 }
 
 /* Grid */
@@ -1053,6 +1061,11 @@
     justify-content: center;
 }
 
+.pricing-section .pricing-wrapper {
+    padding-bottom: 85px;
+
+}
+
 
 
 /* CARD */
@@ -1060,8 +1073,7 @@
     background: #fff;
     padding: 25px;
     border-radius: 16px;
-    width: 100%;
-    max-width: 380px;
+    max-width: 384px;
     margin: auto;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
     display: flex;
@@ -1079,8 +1091,8 @@
     padding: 25px;
     color: white;
     border-radius: 16px;
-    width: 100%;
-    max-width: 380px;
+    max-width: 384px;
+
     margin: auto;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
     display: flex;
@@ -1101,17 +1113,28 @@
     font-weight: 700;
 }
 
+.pricing-section .pricing-card-title-2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .pricing-section .pricing-card .pricing-card-sub {
-    font-size: 14px;
+    font-size: 20px;
     color: rgb(0, 0, 0);
     margin-bottom: -10px;
 }
 
-.pricing-section .pricing-card-2 .pricing-card-sub {
-    font-size: 14px;
+.pricing-sub-full-access {
+    font-size: 18px;
+}
+
+
+/* .pricing-section .pricing-card-2 .pricing-card-sub {
+    font-size: 20px;
     color: white;
     margin-bottom: -10px;
-}
+} */
+
 
 .pricing-section .pricing-card hr {
     border: 0;
@@ -1121,14 +1144,14 @@
 /* Price */
 
 .pricing-section .pricing-price {
-    font-size: 26px;
+    font-size: 40px;
     font-weight: 500;
     color: var(--vg-accent);
     text-align: center;
 }
 
 .pricing-section .pricing-card-2 .pricing-price {
-    font-size: 26px;
+    font-size: 40px;
     font-weight: 500;
     color: white;
     text-align: center;
@@ -1145,6 +1168,7 @@
     display: flex;
     align-items: flex-start;
     gap: 10px;
+    font-size: 18px;
 }
 
 .pricing-section .feature-icon {
@@ -1153,13 +1177,17 @@
     font-weight: bold;
 }
 
+.pricing-section .pricing-card-2 .pricing-features {
+    font-size: 18px;
+}
+
 /* Button */
 .pricing-section .pricing-btn {
     margin-top: 10px;
     padding: 12px 20px;
     background: var(--vg-accent);
     color: #fff;
-
+    font-size: 24px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -1167,6 +1195,12 @@
     width: 90%;
     margin: auto;
     transition: 0.3s ease;
+}
+
+.pricing-section .pricing-card .pricing-btn svg {
+    width: 24px;
+    height: 24px;
+
 }
 
 .pricing-section .pricing-btn {
@@ -1235,10 +1269,15 @@
     cursor: pointer;
     font-weight: 600;
     width: 90%;
+    font-size: 24px;
     margin: auto;
     transition: 0.3s ease;
 }
 
+.pricing-section .pricing-card-2 .pricing-btn-2 svg path {
+    fill: black;
+    stroke: white;
+}
 
 
 .pricing-section .pricing-card-2 .pricing-btn-2:hover {
@@ -1270,13 +1309,16 @@
 
 /* testimonial section start */
 .testimonial-section {
-    margin: 5% 0;
-    min-height: 551px;
+    margin: 5% auto;
+
     position: relative;
     background-color: #272727;
     color: white;
     padding: 60px 20px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+
 }
 
 .testimonial-section .effect-1 {
@@ -1303,11 +1345,13 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
 }
 
 /* Heading */
 .testimonial-section .testimonial-heading {
     /* border: 1px solid white; */
+    max-width: 559px;
 }
 
 .testimonial-heading .title {
@@ -1316,13 +1360,14 @@
     color: #ccc;
     margin-bottom: 8px;
     width: 40%;
+    font-size: 16px;
 
 }
 
 .testimonial-heading h2 {
-    font-size: 28px;
-    width: 73%;
+    font-size: 32px;
     font-weight: 700;
+
 }
 
 .testimonial-heading h2 span {
@@ -1332,45 +1377,59 @@
 /* Testimonial Card */
 .testimonial-section .testimonial-card {
 
-    padding: 30px;
+
     border-radius: 16px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+
 }
 
 .testimonial-rating {
     font-size: 20px;
     color: #D8AFF8;
+    margin-bottom: 8px;
 }
 
 .testimonial-section .testimonial-text {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 140%;
 }
 
-.testimonial-author {
+.testimonial-section .author-name {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+
+}
+
+.testimonial-section .testimonial-author {
     margin-top: 20px;
     display: flex;
+    gap: 3px;
     align-items: center;
-    gap: 12px;
+
+
 }
 
 .testimonial-author img {
-    width: 50px;
-    height: 50px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
 }
 
 .testimonial-author h4 {
-    margin: 0;
-    font-size: 16px;
+
+    font-size: 20px;
+
 }
 
 .testimonial-author span {
-    font-size: 14px;
+    font-size: 18px;
+
     color: #ccc;
+    font-weight: 400;
 }
 
 
@@ -1401,7 +1460,7 @@
     display: grid;
     grid-template-columns: repeat(7, auto);
     align-items: center;
-    gap: 0;
+    gap: 34px;
     width: 100%;
     padding: 20px 0;
 }
@@ -1418,12 +1477,14 @@
 
 .testimonial-stats .stat-item h3 {
 
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 140%;
 }
 
 .testimonial-stats .stat-item p {
-    width: 70%;
-    font-size: 24px;
+
+    font-size: 20px;
 }
 
 .testimonial-section .stat-item .last-border {
@@ -1445,10 +1506,11 @@
 /* silder */
 /* Container */
 .testimonial-slider-container {
-    width: 60%;
+
     overflow: hidden;
     position: relative;
 
+    max-width: 529px;
 }
 
 /* Track */
@@ -1459,13 +1521,14 @@
 
 /* Show 1 card per slide */
 .testimonial-section .testimonial-card {
-    min-width: 100%;
+
+    width: 100%;
 }
 
 /* Buttons Dots */
 .testimonial-section .slider-buttons {
     display: flex;
-    gap: 10px;
+    row-gap: 3px;
     margin-top: 20px;
 }
 
@@ -1507,15 +1570,16 @@
 
 .faq-section .faq-textbox {
 
-    width: 65%;
+    width: 696px;
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 12px;
 
 }
 
 .faq-section .faq-section-name {
-    font-size: 12px;
+    font-size: 16px;
+    line-height: 140%;
 }
 
 
@@ -1532,7 +1596,8 @@
 }
 
 .faq-section .faq-question span {
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 24px;
 }
 
 .faq-section .faq-toggle {
@@ -1540,7 +1605,7 @@
     border: none;
     font-size: 10px;
     cursor: pointer;
-    width: 3%;
+    width: 24px;
     transform: rotate(0deg);
     transition: transform 0.6s;
 }
@@ -1553,12 +1618,13 @@
 }
 
 .faq-section .faq-answer p {
-    margin: 0;
+
+    font-size: 20px;
 }
 
 .faq-section .faq-imagebox {
-    width: 30%;
 
+    max-width: 453px;
 
     position: relative;
     display: flex;
@@ -1568,10 +1634,9 @@
 
 .faq-section .faq-imagebox img {
     width: 100%;
-
     object-fit: cover;
     display: block;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .faq-section .faq-modal {
@@ -1579,7 +1644,7 @@
     bottom: 20px;
     left: 20px;
 
-    background-color: var(--vg-hero-color);
+    background-color: #FBF6FF;
     color: #000000;
     width: 50%;
     padding: 15px 20px;
@@ -1587,9 +1652,9 @@
 }
 
 .faq-section .faq-container .faq-textbox .title {
-    width: 50%;
-    line-height: 1.5;
-    font-size: 30px;
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 40px;
 
 }
 
@@ -1604,6 +1669,11 @@
 
 }
 
+.faq-section .faq-container .faq-imagebox .faq-modal-icon path {
+
+    fill: var(--vg-accent);
+}
+
 
 
 
@@ -1612,7 +1682,13 @@
 
 
 /* TABLET TO LARGE */
-@media screen and (max-width: 1250px) {}
+@media screen and (max-width: 1250px) {
+
+    .testimonial-stats {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+}
 
 
 /* MOBILTE TO TABLET */
@@ -1845,27 +1921,26 @@
 
     }
 
-    .testimonial-slider-container {
-        width: 100%;
 
-    }
 
-    .testimonial-section .testimonial-heading {
 
-        width: 80%;
-    }
 
     .testimonial-heading h2 {
         font-size: 22px;
-        width: 90%;
+
         font-weight: 600;
     }
 
+    .testimonial-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
     .testimonial-stats .stat-item p {
-    width: 60%;
-    font-size: 15px;
-}
-   
+        width: 60%;
+        font-size: 15px;
+    }
+
 }
 
 
@@ -2261,15 +2336,45 @@
 
     .testimonial-section .testimonial-heading .title {
 
-        width: 40%;
+
         margin: auto;
         margin-bottom: 10px;
         text-align: center;
     }
 
+
+    /* swiper */
+
+    .swiper-slide {
+
+        color: #fff;
+        font-size: 30px;
+
+    }
+
+    /* Pagination Edit */
+    .swiper-pagination {
+        bottom: 10px !important;
+        display: flex;
+        justify-content: end;
+    }
+
+    .swiper-pagination-bullet {
+        background: #DEDEDE !important;
+        opacity: 1;
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #D8AFF8 !important;
+    }
+
+    /* swiper */
     .testimonial-section .testimonial-card {
 
-        max-width: 99%;
+        width: 99%;
+
         margin: auto;
         margin: 20px 0;
         padding: 1px;
@@ -2287,12 +2392,19 @@
 
     }
 
+    .faq-section .faq-answer p {
+        font-size: 14px;
+    }
+
     .testimonial-section .testimonial-stats {
         grid-template-columns: repeat(3, 1fr);
         /* 2 columns only */
     }
 
-
+    .testimonial-wrapper {
+        width: 100%;
+        margin: auto;
+    }
 
     .testimonial-section .effect-1 {
 
@@ -2328,10 +2440,7 @@
 
     }
 
-    .testimonial-slider-container {
-        width: 100%;
 
-    }
 
     /* faq section */
 
